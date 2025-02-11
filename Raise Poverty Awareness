@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poverty Awareness</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #fff0f3;
+            color: #5c3a3a;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff5f7;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            border: 3px solid #eac3c3;
+        }
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 40px;
+            background: #f3d9df;
+            color: #5c3a3a;
+            padding: 18px;
+            border-radius: 12px;
+        }
+        .section {
+            text-align: left;
+            margin-top: 25px;
+            padding: 18px;
+            border-left: 4px solid #eac3c3;
+            background: #fff8f9;
+            border-radius: 8px;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        .buttons a, .button-link {
+            display: inline-block;
+            margin: 12px;
+            padding: 14px 35px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            background: #f3d9df;
+            color: #5c3a3a;
+            border: 2px solid #d19c9c;
+            transition: all 0.3s ease;
+        }
+        .buttons a:hover, .button-link:hover {
+            background: #f5dcdc;
+        }
+        .resources-header {
+            font-size: 26px;
+            font-weight: bold;
+            margin-top: 35px;
+            color: #7a4f4f;
+            text-decoration: underline;
+        }
+        .chart-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .chart-box {
+            width: 45%;
+            margin: 10px;
+        }
+        .large-chart-box {
+            width: 100%;
+            margin: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 2px solid #eac3c3;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            background: #fff8f9;
+        }
+        canvas { width: 100% !important; height: auto !important; }
+        .donate-button {
+            display: inline-block;
+            background-color: #ff6b6b;
+            color: #fff;
+            padding: 12px 30px;
+            font-size: 18px;
+            border-radius: 12px;
+            text-decoration: none;
+            margin-top: 20px;
+            width: 100%;
+        }
+        .donate-button:hover {
+            background-color: #ff4757;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Poverty Awareness 🌸</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Sustainable_Development_Goal_01NoPoverty.svg/1200px-Sustainable_Development_Goal_01NoPoverty.svg.png" width="100">
+        
+        <a href="https://www.paypal.com/donate" class="donate-button" target="_blank">Donate Now 💖</a>
+
+        <div class="section">
+            <h2>Understanding Poverty 📖</h2>
+            <p>Poverty affects billions globally, restricting access to necessities such as food, water, healthcare, and education. Women and children are disproportionately impacted, making intervention crucial.</p>
+            <p>Extreme poverty is defined as living on less than $2.15 per day. Over 700 million people worldwide struggle to meet their daily needs. Limited economic opportunities, lack of education, and political instability contribute to the cycle of poverty.</p>
+        </div>
+
+        <div class="section">
+            <h2>Wealth vs. Poverty Comparison 💰</h2>
+            <table>
+                <tr>
+                    <th>Aspect</th>
+                    <th>Wealthy</th>
+                    <th>Poor</th>
+                </tr>
+                <tr>
+                    <td>Education Access</td>
+                    <td>High-quality schools & universities</td>
+                    <td>Limited or no schooling</td>
+                </tr>
+                <tr>
+                    <td>Healthcare</td>
+                    <td>Advanced medical care</td>
+                    <td>Lack of basic healthcare</td>
+                </tr>
+                <tr>
+                    <td>Employment</td>
+                    <td>Stable, high-income jobs</td>
+                    <td>Unstable, low-paying work</td>
+                </tr>
+                <tr>
+                    <td>Housing</td>
+                    <td>Safe, comfortable homes</td>
+                    <td>Substandard or no housing</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Global Poverty Statistics 🌍</h2>
+            <table>
+                <tr>
+                    <th>Region</th>
+                    <th>Poverty Rate (%)</th>
+                    <th>Population Affected</th>
+                </tr>
+                <tr>
+                    <td>Sub-Saharan Africa</td>
+                    <td>40</td>
+                    <td>400 million people</td>
+                </tr>
+                <tr>
+                    <td>South Asia</td>
+                    <td>30</td>
+                    <td>350 million people</td>
+                </tr>
+                <tr>
+                    <td>Latin America & Caribbean</td>
+                    <td>22</td>
+                    <td>130 million people</td>
+                </tr>
+                <tr>
+                    <td>East Asia & Pacific</td>
+                    <td>3</td>
+                    <td>100 million people</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Why Should We Donate? 💖</h2>
+            <p>Donating to poverty relief efforts is one of the most impactful ways to help break the cycle of poverty. Here are some reasons why:</p>
+            <ul>
+                <li><strong>Save Lives:</strong> Donations can provide access to clean water, food, healthcare, and education.</li>
+                <li><strong>Empower Communities:</strong> Your donation can help people gain skills and opportunities to lift themselves out of poverty.</li>
+                <li><strong>Support Sustainable Development:</strong> Charities focus on long-term solutions that address the root causes of poverty.</li>
+                <li><strong>Give Hope:</strong> Every donation helps inspire hope and provides a chance for a better future.</li>
+            </ul>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart-box">
+                <h2>Poverty Rate by Area</h2>
+                <canvas id="povertyChart"></canvas>
+            </div>
+            <div class="chart-box">
+                <h2>Global Poverty Rate</h2>
+                <canvas id="globalPovertyChart"></canvas>
+            </div>
+            <div class="chart-box">
+                <h2>Child Poverty Rates</h2>
+                <canvas id="childPovertyChart"></canvas>
+            </div>
+            <div class="chart-box">
+                <h2>Access to Clean Water</h2>
+                <canvas id="waterAccessChart"></canvas>
+            </div>
+            <div class="large-chart-box">
+                <h2>Global Unemployment Rate</h2>
+                <canvas id="unemploymentChart" style="height: 400px;"></canvas>
+            </div>
+        </div>
+
+        <h2 class="resources-header">Additional Resources 📚</h2>
+        <a href="https://www.worldbank.org/en/topic/poverty" class="button-link" target="_blank">World Bank</a>
+        <a href="https://www.oxfam.org/en/what-we-do/issues/poverty" class="button-link" target="_blank">Oxfam</a>
+        <a href="https://www.unicef.org/social-policy/child-poverty" class="button-link" target="_blank">UNICEF</a>
+        <a href="https://www.un.org/sustainabledevelopment/poverty/" class="button-link" target="_blank">UN SDG</a>
+    </div>
+
+    <script>
+        function createChart(id, type, labels, data, colors) {
+            new Chart(document.getElementById(id).getContext('2d'), {
+                type: type,
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        data: data,
+                        backgroundColor: colors
+                    }]
+                },
+                options: { responsive: true }
+            });
+        }
+
+        createChart('povertyChart', 'bar', ['Urban Areas', 'Rural Areas', 'Global Average'], [15, 35, 25], ['#b56576', '#e5989b', '#ffb4a2']);
+        createChart('globalPovertyChart', 'doughnut', ['People in Poverty', 'People Above Poverty Line'], [9.2, 90.8], ['#e5989b', '#6d6875']);
+        createChart('childPovertyChart', 'bar', ['Developed', 'Developing', 'Least Developed'], [10, 35, 55], ['#ffcdb2', '#ffb4a2', '#e5989b']);
+        createChart('waterAccessChart', 'doughnut', ['No Access', 'Access'], [26, 74], ['#e5989b', '#b56576']);
+        createChart('unemploymentChart', 'line', ['2019', '2020', '2021', '2022'], [5, 7, 6, 4.5], ['#ffb4a2']);
+    </script>
+</body>
+</html>
